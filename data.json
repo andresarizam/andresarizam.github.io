@@ -1,0 +1,141 @@
+{
+    "celulares": [
+        {
+            "marca": "Apple",
+            "modelos": [
+                {
+                    "modelo": "iPhone 13",
+                    "almacenamiento": "256 GB",
+                    "precio": "$999",
+                    "foto": "imagenes/apple1.jpg",
+                    "descripcion": "Dispositivo con potente chip A15 y excelente calidad de cámara."
+                },
+                {
+                    "modelo": "iPhone 12 pro",
+                    "almacenamiento": "128 GB",
+                    "precio": "$799",
+                    "foto": "imagenes/apple2.jpg",
+                    "descripcion": "Diseño elegante con rendimiento rápido y buena cámara."
+                },
+                {
+                    "modelo": "iPhone SE (2022)",
+                    "almacenamiento": "64 GB",
+                    "precio": "$429",
+                    "foto": "imagenes/apple3.jpg",
+                    "descripcion": "Potente rendimiento en un formato compacto."
+                },
+                {
+                    "modelo": "iPhone 14 Pro",
+                    "almacenamiento": "256 GB",
+                    "precio": "$1099",
+                    "foto": "imagenes/apple4.jpg",
+                    "descripcion": "Increíble cámara y pantalla ProMotion."
+                }
+            ]
+        },
+        {
+            "marca": "Xiaomi",
+            "modelos": [
+                {
+                    "modelo": "Mi 11",
+                    "almacenamiento": "256 GB",
+                    "precio": "$749",
+                    "foto": "imagenes/xiaomi1.jpg",
+                    "descripcion": "Teléfono con carga rápida y pantalla AMOLED de 120 Hz."
+                },
+                {
+                    "modelo": "Redmi Note 10",
+                    "almacenamiento": "128 GB",
+                    "precio": "$199",
+                    "foto": "imagenes/xiaomi2.jpg",
+                    "descripcion": "Buen rendimiento a un precio asequible."
+                }
+            ]
+        },
+        {
+            "marca": "Huawei",
+            "modelos": [
+                {
+                    "modelo": "P40 Pro",
+                    "almacenamiento": "256 GB",
+                    "precio": "$899",
+                    "foto": "imagenes/huawei1.jpg",
+                    "descripcion": "Gran calidad de cámara y diseño premium."
+                },
+                {
+                    "modelo": "Mate 40 Pro",
+                    "almacenamiento": "256 GB",
+                    "precio": "$999",
+                    "foto": "imagenes/huawei2.jpg",
+                    "descripcion": "Rendimiento potente y excelente sistema de cámaras."
+                },
+                {
+                    "modelo": "P30 Lite",
+                    "almacenamiento": "128 GB",
+                    "precio": "$299",
+                    "foto": "imagenes/huawei3.jpg",
+                    "descripcion": "Buena opción de gama media con cámara triple."
+                }
+            ]
+        },
+        {
+            "marca": "Samsung",
+            "modelos": [
+                {
+                    "modelo": "Galaxy S21",
+                    "almacenamiento": "128 GB",
+                    "precio": "$799",
+                    "foto": "imagenes/samsung1.jpg",
+                    "descripcion": "Smartphone de gama alta con pantalla AMOLED y triple cámara."
+                },
+                {
+                    "modelo": "Galaxy Note 20",
+                    "almacenamiento": "256 GB",
+                    "precio": "$999",
+                    "foto": "imagenes/samsung2.jpg",
+                    "descripcion": "Pantalla grande y S-Pen para productividad."
+                },
+                {
+                    "modelo": "Galaxy A52",
+                    "almacenamiento": "128 GB",
+                    "precio": "$499",
+                    "foto": "imagenes/samsung3.jpg",
+                    "descripcion": "Buen equilibrio entre rendimiento y precio."
+                },
+                {
+                    "modelo": "Galaxy Z Flip3",
+                    "almacenamiento": "256 GB",
+                    "precio": "$999",
+                    "foto": "imagenes/samsung4.jpg",
+                    "descripcion": "Innovador diseño plegable con gran pantalla."
+                }
+            ]
+        },
+        {
+            "marca": "Motorola",
+            "modelos": [
+                {
+                    "modelo": "Moto G Power (2021)",
+                    "almacenamiento": "64 GB",
+                    "precio": "$249",
+                    "foto": "imagenes/moto1.jpg",
+                    "descripcion": "Batería de larga duración y buen rendimiento."
+                },
+                {
+                    "modelo": "Moto G Stylus (2021)",
+                    "almacenamiento": "128 GB",
+                    "precio": "$299",
+                    "foto": "imagenes/moto2.jpg",
+                    "descripcion": "Incluye un stylus para tomar notas."
+                },
+                {
+                    "modelo": "Motorola One 5G",
+                    "almacenamiento": "128 GB",
+                    "precio": "$399",
+                    "foto": "imagenes/moto3.jpg",
+                    "descripcion": "Conectividad 5G y buena calidad de cámara."
+                }
+            ]
+        }
+    ]
+}

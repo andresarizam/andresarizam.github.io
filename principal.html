@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Celulares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <h1>Marcas de Celulares</h1>
+    <p style="text-align: center; font-size: 1.2em;">Página web donde se evidencia el uso de diccionarios, tuplas y listas.</p>
+
+    <!-- Filtro de marcas -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <label for="marcaSelect">Filtrar por marca:</label>
+        <select id="marcaSelect">
+            <option value="all">Todas</option>
+            <option value="Apple">Apple</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Huawei">Huawei</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Motorola">Motorola</option>
+        </select>
+    </div>
+
+    <table id="celulares">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Almacenamiento</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos se cargarán aquí -->
+        </tbody>
+    </table>
+
+    <script>
+        let celularesData = []; // Almacenaremos los datos aquí
+
+        // Cargar los datos desde el archivo JSON
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la red');
+                }
+                return response.json();
+            })
+            .then(data => {
+                celularesData = data.celulares; // Guardar los datos
+                renderTable(celularesData); // Renderizar la tabla inicial
+            })
+            .catch(error => console.error('Error al cargar los datos:', error));
+
+        // Función para renderizar la tabla
+        function renderTable(data) {
+            const tbody = document.querySelector('#celulares tbody');
+            tbody.innerHTML = ''; // Limpiar la tabla antes de agregar nuevos datos
+            data.forEach(marca => {
+                marca.modelos.forEach(celular => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td data-label="Marca">${marca.marca}</td>
+                        <td data-label="Modelo">${celular.modelo}</td>
+                        <td data-label="Almacenamiento">${celular.almacenamiento}</td>
+                        <td data-label="Precio">${celular.precio}</td>
+                        <td data-label="Descripción">${celular.descripcion}</td>
+                        <td data-label="Foto"><img src="${celular.foto}" alt="${celular.modelo}" width="100"></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            });
+        }
+
+        // Filtrar los celulares por marca
+        document.getElementById('marcaSelect').addEventListener('change', function() {
+            const selectedBrand = this.value;
+            const filteredData = selectedBrand === 'all'
+                ? celularesData
+                : celularesData.filter(marca => marca.marca === selectedBrand);
+            renderTable(filteredData);
+        });
+    </script>
+</body>
+</html>
